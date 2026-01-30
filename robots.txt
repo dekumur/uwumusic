@@ -8,4 +8,4 @@ Allow: /recommendations.html
 Allow: /genres.html
 Allow: /*.css$
 Allow: /*.js$
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://uwumusic.vercel.app/sitemap.xml
