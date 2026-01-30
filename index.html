@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Главная</title>
+  <meta name="description" content="Слушай и загружай музыку, находи новых артистов и создавай плейлисты. Присоединяйся и начни открывать свой музыкальный мир!" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link type="image/x-icon" href="favicon/favicon.ico" rel="shortcut icon">
+  <link type="Image/x-icon" href="favicon/favicon.ico" rel="icon">
+</head>
+
+<body>
+  <div class="menu-overlay"></div>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <div class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <a href="index.html"><img src="/img/logo.svg" alt="logo"></a>
+        <nav class="menu">
+          <button class="menu-close">&times;</button>
+          <ul class="menu__list">
+            <li class="menu__item"><a class="menu__list-link" href="#">Новинки</a></li>
+            <li class="menu__item"><a class="menu__list-link" href="recommendations.html">Рекомендации</a></li>
+            <li class="menu__item"><a class="menu__list-link" href="genres.html">Жанры</a></li>
+            <li class="menu__item"><a class="menu__list-link" href="#">Плейлисты</a></li>
+            <li class="menu__item"><a class="menu__list-link" href="#">Исполнители</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <img src="/img/bg.webp" alt="bg_hero" aria-hidden="true" class="hero-bg" fetchpriority="high">
+      <div class="container">
+        <h1 class="title__hero">Новая эра онлайн-музыки</h1>
+        <p class="description__hero">Музыкальная индустрия меняется быстрее, чем когда-либо. Каждый день появляются новые песни 2025 года, свежие релизы молодых артистов и неожиданные коллаборации. Если ты ищешь платформу, где можно слушать популярную музыку онлайн, открывать новинки русской и зарубежной музыки, создавать свои плейлисты и делиться любимыми треками — ты нашёл подходящее место</p>
+      </div>
+    </section>
+    <section class="offers wrap">
+      <div class="container">
+        <h2 class="title__section">Что ждёт слушателей в 2025 году</h2>
+        <p class="description__section">Музыкальный контент становится всё более персонализированным. Поэтому наша платформa предлагает:</p>
+        <div class="offer__inner">
+          <div class="column">
+            <div class="offer__inner-item">
+              <span><img class="icon" src="/img/icon_music.svg" alt="icon"></span>
+              <p class="offer__inner-text">ежедневные новые релизы и свежие треки</p>
+            </div>
+            <div class="offer__inner-item">
+              <span><img class="icon" src="/img/icon_genre.svg" alt="icon"></span>
+              <p class="offer__inner-text">подборки по <a class="link__int" href="genres.html" title="Перейти в раздел 'Жанры'">жанрам:</a> поп, рок, шансон, хип-хоп, электронная музыка</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="offer__inner-item">
+              <span><img class="icon" src="/img/icon_recom.svg" alt="icon"></span>
+              <p class="offer__inner-text">умные рекомендации под настроение — просто выбери “что послушать сегодня”</p>
+            </div>
+            <div class="offer__inner-item">
+              <span><img class="icon" src="/img/icon_noad.svg" alt="icon"></span>
+              <p class="offer__inner-text">возможность слушать музыку онлайн без рекламы</p>
+            </div>
+          </div>
+        </div>
+        <p class="description__section">Мы анализируем твои предпочтения и создаём музыку под твой ритм жизни — от утренних плейлистов до треков для тренировок и отдыха</p>
+      </div>
+    </section>
+    <section class="music__trend wrap">
+      <div class="container">
+        <h2 class="title__section">Музыка в тренде</h2>
+        <p class="description__text">В 2025 году слушатели выбирают разнообразие: от новинок русской музыки и зарубежных хитов до мощных рок-композиций и душевного шансона. На платформе каждый день появляются новые песни этого года — от клубных треков до лирических баллад</p>
+        <p class="text__section">Хочешь быть в курсе музыкальных трендов? Следи за разделом «Музыка в тренде» и слушай то, что выбирает весь мир</p>
+        <div class="gallery__artists">
+          <div class="artist">
+            <img class="musician" src="/img/yeat-200.webp" srcset="/img/yeat-150.webp 150w, /img/yeat-200.webp 200w" sizes="(max-width: 480px) 150px, 200px" loading="lazy" alt="YEAT" title="Послушать песни Yeat">
+            <span class="artist-name">YEAT</span>
+          </div>
+          <div class="artist">
+            <img class="musician" src="/img/krug-200.webp" srcset="/img/krug-150.webp 150w, /img/krug-200.webp 200w" sizes="(max-width: 480px) 150px, 200px" loading="lazy" alt="МИХАИЛ КРУГ" title="Послушать песни Михаила Круга">
+            <span class="artist-name">МИХАИЛ КРУГ</span>
+          </div>
+          <div class="artist">
+            <img class="musician" src="/img/billie-200.webp" srcset="/img/billie-150.webp 150w, /img/billie-200.webp 200w" sizes="(max-width: 480px) 150px, 200px" loading="lazy" alt="BILLIE EILISH" title="Послушать песни Billie Eilish">
+            <span class="artist-name">BILLIE EILISH</span>
+          </div>
+          <div class="artist">
+            <img class="musician" src="/img/playboi-200.webp" srcset="/img/playboi-150.webp 150w, /img/playboi-200.webp 200w" sizes="(max-width: 480px) 150px, 200px" loading="lazy" alt="PLAYBOI CARTI" title="Послушать песни Playboi Carti">
+            <span class="artist-name">PLAYBOI CARTI</span>
+          </div>
+          <div class="artist">
+            <img class="musician" src="/img/linkin-200.webp" srcset="/img/linkin-150.webp 150w, /img/linkin-200.webp 200w" sizes="(max-width: 480px) 150px, 200px" loading="lazy" alt="LINKIN PARK" title="Послушать песни Linkin Park">
+            <span class="artist-name">LINKIN PARK</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="for__artist wrap">
+      <div class="container">
+        <h2 class="title__section">Возможности для артистов и музыкантов</h2>
+        <p class="description__section">Платформа создана не только для слушателей, но и для независимых исполнителей. Каждый артист может:</p>
+        <div class="for__artist__inner">
+          <div class="column">
+            <div class="for__artist__inner-item">
+              <span><img class="icon" src="img/icon_download.svg" alt="icon"></span>
+              <p class="for__artist__inner-text">загружать новые песни без посредников и лейблов</p>
+            </div>
+            <div class="for__artist__inner-item">
+              <span><img class="icon" src="img/icon_analytic.svg" alt="icon"></span>
+              <p class="for__artist__inner-text">получать аналитику популярности: прослушивания, лайки, демография</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="for__artist__inner-item">
+              <span><img class="icon" src="img/icon_community.svg" alt="icon"></span>
+              <p class="for__artist__inner-text">находить свою аудиторию и попадать в популярные плейлисты</p>
+            </div>
+            <div class="for__artist__inner-item">
+              <span><img class="icon" src="img/icon_top.svg" alt="icon"></span>
+              <p class="for__artist__inner-text">продвигать свои треки и увеличивать охваты без лишних затрат</p>
+            </div>
+          </div>
+        </div>
+        <p class="description__section">Мы даём музыкантам прямой доступ к слушателям — честный и прозрачный</p>
+      </div>
+    </section>
+    <section class="advantages wrap">
+      <div class="container">
+        <h2 class="title__section">Почему пользователи выбирают нас</h2>
+        <p class="description__section2">Мы создали музыкальную платформу нового поколения — без рекламы, без шумов, без лишних кнопок. Только ты и твоя музыка</p>
+        <div class="advantages__iner">
+          <div class="column">
+            <h3 class="subtitle__title">Преимущества для слушателей</h3>
+            <div class="advantages__iner-item">
+              <span><img class="icon" src="img/icon_sound.svg" alt="icon"></span>
+              <p class="advantages__iner-text">чистый звук в высоком качестве</p>
+            </div>
+            <div class="advantages__iner-item">
+              <span><img class="icon" src="img/icon_mood.svg" alt="icon"></span>
+              <p class="advantages__iner-text">персональные <a class="link__int" href="recommendations.html" title="Перейти в раздел 'Рекомендации'">рекомендации</a> под настроение и вкус</p>
+            </div>
+            <div class="advantages__iner-item">
+              <span><img class="icon" src="img/icon_mobile.svg" alt="icon"></span>
+              <p class="advantages__iner-text">удобный доступ с любых устройств</p>
+            </div>
+            <div class="advantages__iner-item">
+              <span><img class="icon" src="img/icon_album.svg" alt="icon"></span>
+              <p class="advantages__iner-text">эксклюзивные альбомы и новинки музыки</p>
+            </div>
+            <div class="advantages__iner-item">
+              <span><img class="icon" src="img/icon_playlist.svg" alt="icon"></span>
+              <p class="advantages__iner-text">готовые плейлисты: «Что послушать сегодня», подборки по жанру и состоянию</p>
+            </div>
+          </div>
+          <div class="column">
+            <h3 class="subtitle__title">Преимущества для артистов</h3>
+            <div class="advantages__iner-item">
+              <span><img class="icon" src="img/icon_download.svg" alt="icon"></span>
+              <p class="advantages__iner-text">загрузка треков без лейблов и посредников</p>
+            </div>
+            <div class="advantages__iner-item">
+              <span><img class="icon" src="img/icon_leader.svg" alt="icon"></span>
+              <p class="advantages__iner-text">инструменты продвижения и роста аудитории</p>
+            </div>
+            <div class="advantages__iner-item">
+              <span><img class="icon" src="img/icon_stoncks.svg" alt="icon"></span>
+              <p class="advantages__iner-text">подробная статистика, которая помогает развиваться</p>
+            </div>
+            <div class="advantages__iner-item">
+              <span><img class="icon" src="img/icon_top.svg" alt="icon"></span>
+              <p class="advantages__iner-text">шанс попасть в топовые подборки и рекомендации</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="create__acc wrap">
+      <div class="container">
+        <h2 class="title__section2">С нами популярная музыка онлайн становится ближе — слушай, вдохновляйся и создавай свои хиты</h2>
+        <div class="Btn">
+          <button class="btn btn--white" id="loginBtn">Войти</button>
+          <button class="btn btn--blue" id="registerBtn">Зарегистрироваться</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <address>
+                <a class="social__link" href="#" rel="nofollow" target="_blank"><img src="img/icon_tg.svg" alt="tg"></a>
+                <a class="social__link" href="#" rel="nofollow" target="_blank"><img src="img/icon_vk.svg" alt="vk"></a>
+                <a class="social__link" href="#" rel="nofollow" target="_blank"><img src="img/icon_discord.svg" alt="discord"></a>
+            </address>
+  </footer>
+  <div class="modal" id="artistModal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <h2 class="modal-title">Артист</h2>
+      <div class="audio-player">
+        <audio id="audioPlayer"></audio>
+        <button class="play-btn">▶</button>
+        <div class="timeline">
+          <div class="progress"></div>
+        </div>
+        <span class="time current">0:00</span>
+        <span class="time duration">0:00</span>
+      </div>
+      <ul class="modal-tracks"></ul>
+    </div>
+  </div>
+  <div class="modal" id="loginModal">
+    <div class="modal-content auth-modal">
+      <span class="modal-close">&times;</span>
+      <h2 class="modal-title">Вход</h2>
+      <form class="auth-form">
+        <label>Введите email:</label>
+        <input type="email" placeholder="Email" required>
+        <label>Введите пароль:</label>
+        <input type="password" placeholder="Пароль" required>
+        <button type="submit" class="btn btn--blue">Войти</button>
+        <p class="auth-switch">
+          Нет аккаунта?
+          <button type="button" data-switch="register">Зарегистрироваться</button>
+        </p>
+      </form>
+    </div>
+  </div>
+  <div class="modal" id="registerModal">
+    <div class="modal-content auth-modal">
+      <span class="modal-close">&times;</span>
+      <h2 class="modal-title">Регистрация</h2>
+      <form class="auth-form">
+        <label>Введите никнейм:</label>
+        <input type="text" placeholder="Имя" required>
+        <label>Введите email:</label>
+        <input type="email" placeholder="Email" required>
+        <label>Введите пароль:</label>
+        <input type="password" placeholder="Пароль" required>
+        <button type="submit" class="btn btn--blue">Зарегистрироваться</button>
+        <p class="auth-switch">
+          Уже зарегистрированы?
+          <button type="button" data-switch="login">Войти</button>
+        </p>
+      </form>
+    </div>
+  </div>
+  <script src="js/menu.js" defer></script>
+  <script type="module" src="js/modal.js"></script>
+  <script src="js/auth-modal.js" defer></script>
+</body>
+
+</html>

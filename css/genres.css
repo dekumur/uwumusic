@@ -1,0 +1,754 @@
+.genres-hero {
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.genres-hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 70%;
+    filter: brightness(0.4);
+    z-index: 1;
+}
+
+.genres-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.genres-hero h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.genres-hero p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.vibe-cards {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    padding: 10px 0;
+    justify-content: center;
+}
+
+.vibe-card {
+    flex: 0 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    border-radius: 16px;
+    min-width: 180px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+    background-size: cover;
+    background-position: center;
+}
+
+.vibe-card:hover {
+    transform: translateY(-4px);
+}
+
+.vibe-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    z-index: 0;
+}
+
+.vibe-card .vibe-title {
+    z-index: 2;
+    font-size: 16px;
+}
+
+.vibe-card .play-btn {
+    background: rgba(0, 0, 0, 0.4);
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    z-index: 2;
+    transition: background 0.2s;
+}
+
+.vibe-card .play-btn:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.vibe-section {
+    margin: 50px 0px;
+}
+
+.genre-card {
+    position: relative;
+    height: 140px;
+    border-radius: 18px;
+    overflow: hidden;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #1f1f1f;
+    display: flex;
+    align-items: flex-end;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.genre-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.15));
+    z-index: 1;
+    transition: 0.35s;
+}
+
+.genre-card span {
+    position: relative;
+    z-index: 2;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.vibe-cards {
+    scrollbar-width: thin;
+    /* для Firefox */
+    scrollbar-color: #00AACC transparent;
+}
+
+/* Прокрутка для Webkit (Chrome, Safari) */
+.editor-cards::-webkit-scrollbar {
+    height: 6px;
+}
+
+.editor-cards::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.editor-cards::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+.genre-card:hover {
+    transform: translateY(-6px);
+}
+
+.track-of-day-section {
+    margin: 50px 0;
+}
+
+.track-of-day-section h2 {
+    margin-bottom: 30px;
+}
+
+.tod-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+.tod-card {
+    position: relative;
+    background: #1f1f1f;
+    border-radius: 18px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.tod-card:hover {
+    transform: translateY(-5px);
+}
+
+.tod-cover {
+    width: 100%;
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 18px 18px 0 0;
+    position: relative;
+}
+
+.tod-cover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 18px 18px 0 0;
+}
+
+.tod-info {
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.tod-info strong {
+    font-size: 16px;
+    text-align: center;
+}
+
+.tod-info small {
+    font-size: 14px;
+    color: #aaa;
+    text-align: center;
+}
+
+.tod-genres {
+    font-size: 12px;
+    color: #888;
+    margin-top: 4px;
+    text-align: center;
+}
+
+.tod-play {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: none;
+    color: #000000;
+    font-size: 20px;
+    cursor: pointer;
+    align-self: center;
+    margin: 8px 0;
+    z-index: 2;
+    transition: transform 0.2s;
+}
+
+.tod-play:hover {
+    transform: scale(1.1);
+}
+
+.tod-wave {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    height: 32px;
+    padding: 0 16px 12px 16px;
+}
+
+.tod-wave span {
+    width: 3px;
+    height: 6px;
+    background: #00DDFF;
+    border-radius: 2px;
+    opacity: 0.35;
+    transition: height 0.12s linear, opacity 0.12s;
+}
+
+.tod-card.active .tod-wave span {
+    opacity: 1;
+}
+
+.tod-player {
+    margin-top: 8px;
+}
+
+.tod-timeline {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.tod-progress {
+    height: 100%;
+    width: 0%;
+    background: #00DDFF;
+    border-radius: 2px;
+}
+
+.tod-time {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #aaa;
+    margin-top: 4px;
+}
+
+.purpose-section {
+    margin: 50px 0;
+}
+
+.purpose-subtitle {
+    margin-bottom: 30px;
+}
+
+.purpose-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 24px;
+}
+
+.purpose-card {
+    position: relative;
+    height: 120px;
+    border-radius: 18px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    transition: transform 0.25s ease;
+    overflow: hidden;
+}
+
+.purpose-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.2));
+}
+
+.purpose-card span {
+    position: relative;
+    z-index: 2;
+    padding: 14px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.purpose-card:hover {
+    transform: translateY(-5px);
+}
+
+.genre-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.genre-card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.genre-title {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+.random-section {
+    margin: 80px 0;
+    text-align: center;
+}
+
+.random-text {
+    margin: 16px 0 32px;
+    font-size: 16px;
+}
+
+.random-btn {
+    font-size: 18px;
+    padding: 14px 36px;
+    border-radius: 30px;
+    background-color: #00DDFF;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.random-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 221, 255, 0.4);
+}
+
+.dice {
+    display: inline-block;
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+}
+
+.random-btn.rolling .dice {
+    animation: diceRoll 0.6s ease-in-out;
+}
+
+.vibe-card,
+.purpose-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    min-width: 150px; /* для горизонтального скролла */
+    height: 120px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vibe-card img,
+.purpose-card img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    border-radius: inherit;
+}
+
+.vibe-card::before,
+.purpose-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.2));
+    z-index: 0;
+    border-radius: inherit;
+}
+
+.vibe-card span,
+.purpose-card span {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 14px;
+    text-align: center;
+}
+
+.vibe-card:hover,
+.purpose-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes diceRoll {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    30% {
+        transform: rotate(120deg) scale(1.2);
+    }
+
+    60% {
+        transform: rotate(240deg) scale(1.2);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+.star-preloader {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.star-preloader.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.star-preloader .stars {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.star-preloader .stars span {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: #00DDFF;
+    border-radius: 50%;
+    animation: starBounce 1s infinite ease-in-out;
+}
+
+.horizontal-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+}
+
+.horizontal-scroll>* {
+    scroll-snap-align: start;
+}
+
+.star-preloader .stars span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.star-preloader .stars span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.star-preloader .stars span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.star-preloader .stars span:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.star-preloader .stars span:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.vibe-card img,
+.purpose-card img {
+    filter: brightness(0.6);
+}
+.vibe-card span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 10px;
+}
+
+.purpose-card span {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 0 10px;
+}
+
+@keyframes starBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translateY(-15px);
+        opacity: 1;
+    }
+}
+
+.star-preloader p {
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 1024px) {
+    .genres-hero {
+        height: 320px;
+    }
+
+    .genres-hero h1 {
+        font-size: 36px;
+    }
+
+    .genres-hero p {
+        font-size: 16px;
+        max-width: 500px;
+    }
+
+    .vibe-cards {
+        gap: 20px;
+        padding: 5px 0;
+    }
+
+    .vibe-card {
+        min-width: 150px;
+        padding: 12px 16px;
+    }
+
+    .genre-card {
+        height: 120px;
+    }
+
+    .genre-card span {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .purpose-cards {
+        gap: 16px;
+    }
+
+    .purpose-card {
+        height: 100px;
+    }
+
+    .purpose-card span {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .genres-hero {
+        height: 250px;
+    }
+
+    .genres-hero h1 {
+        font-size: 28px;
+    }
+
+    .genres-hero p {
+        font-size: 14px;
+        max-width: 300px;
+    }
+
+    .vibe-cards {
+        gap: 15px;
+    }
+
+    .vibe-card {
+        min-width: 120px;
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .genre-card {
+        height: 100px;
+    }
+
+    .genre-card span {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .purpose-cards {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 12px;
+    }
+
+    .purpose-card {
+        height: 90px;
+    }
+
+    .purpose-card span {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .random-btn {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .genres-hero h1 {
+        font-size: 22px;
+    }
+
+    .genres-hero p {
+        font-size: 12px;
+        max-width: 250px;
+    }
+
+    .vibe-card {
+        min-width: 100px;
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .genre-card {
+        height: 90px;
+    }
+
+    .genre-card span {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .purpose-card {
+        height: 80px;
+    }
+
+    .purpose-card span {
+        font-size: 12px;
+        padding: 6px;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .splide__slide,
+    .vibe-card {
+        flex: 0 0 22%;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .splide__slide,
+    .vibe-card {
+        flex: 0 0 30%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .splide__slide,
+    .vibe-card {
+        flex: 0 0 45%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .splide__slide,
+    .vibe-card {
+        flex: 0 0 80%;
+    }
+}

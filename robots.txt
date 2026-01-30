@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /trends.html
+Disallow: /playlists.html
+Disallow: /news.html
+Disallow: /performers.html
+Allow: /index.html
+Allow: /recommendations.html
+Allow: /genres.html
+Allow: /*.css$
+Allow: /*.js$
+Sitemap: https://example.com/sitemap.xml

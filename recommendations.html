@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Персональные музыкальные рекомендации: новые треки, любимые исполнители и подборки на любой вкус и настроение">
+  <link rel="stylesheet" href="css/recommendations.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
+  <link type="image/x-icon" href="favicon/favicon.ico" rel="shortcut icon">
+  <link type="Image/x-icon" href="favicon/favicon.ico" rel="icon">
+  <title>Рекомендации</title>
+</head>
+
+<body>
+  <div class="menu-overlay"></div>
+  <header class="header">
+    <div class="container header__inner">
+      <div class="burger"><span></span><span></span><span></span></div>
+      <a href="index.html"><img src="/img/logo.svg" alt="logo"></a>
+      <nav class="menu">
+        <button class="menu-close">&times;</button>
+        <ul class="menu__list">
+          <li class="menu__item"><a class="menu__list-link" href="#">Новинки</a></li>
+          <li class="menu__item"><a class="menu__list-link" href="recommendations.html">Рекомендации</a></li>
+          <li class="menu__item"><a class="menu__list-link" href="genres.html">Жанры</a></li>
+          <li class="menu__item"><a class="menu__list-link" href="#">Плейлисты</a></li>
+          <li class="menu__item"><a class="menu__list-link" href="#">Исполнители</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="recommendations-hero wrap">
+      <img 
+        src="/img/recommendations-hero.webp"
+        srcset="
+          /img/recommendations-hero-480w.webp 480w,
+          /img/recommendations-hero-768w.webp 768w,
+        "
+        sizes="100vw"
+        alt=""
+        aria-hidden="true"
+        class="recommendations-hero-bg"
+        fetchpriority="high"
+        decoding="async"
+      >
+
+      <div class="container recommendations-hero-content">
+        <h1>Рекомендации для тебя</h1>
+        <p>Подбираем музыку, которая точно тебе понравится — от личных фаворитов до неожиданных открытий.</p>
+      </div>
+    </section>
+    <section class="recommendations-tod wrap">
+      <div class="container">
+        <div class="recommendations-tod-header">
+          <h2>Треки дня</h2>
+          <p>Подборка свежих треков специально для тебя — личные фавориты и новые открытия.</p>
+        </div>
+
+        <div class="tod-cards">
+
+          <div class="tod-card" id="tod-1">
+            <img class="tod-cover" src="/img/zxccursed.webp" alt="zxcursed — METAMORPHOSIS 3" loading="lazy">
+            <div class="tod-info">
+              <strong>zxcursed</strong>
+              <small>METAMORPHOSIS 3</small>
+              <div class="tod-genres">Дрифт-фонк, электроника, рэп</div>
+              <div class="tod-player">
+                <div class="tod-timeline"><div class="tod-progress"></div></div>
+                <div class="tod-time"><span class="tod-current">0:00</span> <span class="tod-duration">0:00</span></div>
+                <button class="tod-play">▶</button>
+              </div>
+            </div>
+            <div class="tod-wave">
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <div class="tod-card" id="tod-2">
+            <img class="tod-cover" src="/img/Будильник.webp" alt="Егор Крид — Будильник" loading="lazy">
+            <div class="tod-info">
+              <strong>Егор Крид</strong>
+              <small>Будильник</small>
+              <div class="tod-genres">Поп-музыка</div>
+              <div class="tod-player">
+                <div class="tod-timeline"><div class="tod-progress"></div></div>
+                <div class="tod-time"><span class="tod-current">0:00</span> <span class="tod-duration">0:00</span></div>
+                <button class="tod-play">▶</button>
+              </div>
+            </div>
+            <div class="tod-wave">
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <div class="tod-card" id="tod-3">
+            <img class="tod-cover" src="/img/джугмейн смоки - джуг семерка.webp" alt="джугмейн смоки — джуг семерка" loading="lazy">
+            <div class="tod-info">
+              <strong>джугмейн смоки</strong>
+              <small>джуг семерка</small>
+              <div class="tod-genres">Рэп, электроника</div>
+              <div class="tod-player">
+                <div class="tod-timeline"><div class="tod-progress"></div></div>
+                <div class="tod-time"><span class="tod-current">0:00</span> <span class="tod-duration">0:00</span></div>
+                <button class="tod-play">▶</button>
+              </div>
+            </div>
+            <div class="tod-wave">
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <div class="tod-card" id="tod-4">
+            <img class="tod-cover" src="/img/Диана Гурцкая - Нежная.webp" alt="Диана Гурцкая — Нежная" loading="lazy">
+            <div class="tod-info">
+              <strong>Диана Гурцкая</strong>
+              <small>Нежная</small>
+              <div class="tod-genres">Поп-музыка</div>
+              <div class="tod-player">
+                <div class="tod-timeline"><div class="tod-progress"></div></div>
+                <div class="tod-time"><span class="tod-current">0:00</span> <span class="tod-duration">0:00</span></div>
+                <button class="tod-play">▶</button>
+              </div>
+            </div>
+            <div class="tod-wave">
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <div class="tod-card" id="tod-5">
+            <img class="tod-cover" src="/img/Татьяна Буланова - Ясный мой свет.webp" alt="Татьяна Буланова — Ясный мой свет" loading="lazy">
+            <div class="tod-info">
+              <strong>Татьяна Буланова</strong>
+              <small>Ясный мой свет</small>
+              <div class="tod-genres">Поп-музыка, шансон</div>
+              <div class="tod-player">
+                <div class="tod-timeline"><div class="tod-progress"></div></div>
+                <div class="tod-time"><span class="tod-current">0:00</span> <span class="tod-duration">0:00</span></div>
+                <button class="tod-play">▶</button>
+              </div>
+            </div>
+            <div class="tod-wave">
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section class="recommendations-editor wrap">
+      <div class="container">
+        <div class="section-header">
+          <h2>Собрано редакцией</h2>
+          <p>Лучшие подборки треков от нашей команды</p>
+        </div>
+
+        <div class="editor-cards">
+
+          <div class="editor-card" data-tracks="sergei_pirate">
+            <img class="editor-cover" src="/img/серега пират.webp" alt="Серега Пират: лучшее" loading="lazy">
+            <div class="editor-info">
+              <strong>Серега Пират: лучшее</strong>
+            </div>
+          </div>
+
+          <div class="editor-card" data-tracks="nostalgic">
+            <img class="editor-cover" src="/img/nostalgia.webp" alt="Ностальгия" loading="lazy">
+            <div class="editor-info">
+              <strong>Ностальгия</strong>
+            </div>
+          </div>
+
+          <div class="editor-card" data-tracks="edit">
+            <img class="editor-cover" src="/img/edit.webp" alt="Как-будто в эдите" loading="lazy">
+            <div class="editor-info">
+              <strong>Как-будто в эдите</strong>
+            </div>
+          </div>
+
+          <div class="editor-card" data-tracks="anime_opening">
+            <img class="editor-cover" src="/img/anime_opening.webp" alt="Опенинги: лучшее" loading="lazy">
+            <div class="editor-info">
+              <strong>Опенинги: лучшее</strong>
+            </div>
+          </div>
+
+          <div class="editor-card" data-tracks="videogame">
+            <img class="editor-cover" src="/img/videogame.webp" alt="VGM: лучшее" loading="lazy">
+            <div class="editor-info">
+              <strong>VGM: лучшее</strong>
+            </div>
+          </div>
+
+          <div class="editor-card" data-tracks="somewhere_heard">
+            <img class="editor-cover" src="/img/somewhere_heard.webp" alt="Где-то слышал" loading="lazy">
+            <div class="editor-info">
+              <strong>Где-то слышал</strong>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section class="recommendations-surprise wrap">
+      <div class="container">
+        <div class="recommendations-tod-header">
+          <h2>Скрытые жемчужины</h2>
+          <p>Редкие треки, которые могут стать твоими новыми любимыми.</p>
+        </div>
+
+        <div class="tod-cards">
+
+          <div class="tod-card" id="tod-6">
+            <img class="tod-cover" src="/img/basshunter-dota.webp" alt="Basshunter - Dota" loading="lazy">
+            <div class="tod-info">
+              <strong>Basshunter</strong>
+              <small>Dota</small>
+              <div class="tod-genres">Танцевальная музыка, евродэнс</div>
+              <div class="tod-player">
+                <div class="tod-timeline"><div class="tod-progress"></div></div>
+                <div class="tod-time"><span class="tod-current">0:00</span> <span class="tod-duration">0:00</span></div>
+                <button class="tod-play">▶</button>
+              </div>
+            </div>
+            <div class="tod-wave">
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <div class="tod-card" id="tod-7">
+            <img class="tod-cover" src="/img/homecoming.webp" alt="9mice, Kai Angel - Homecoming" loading="lazy">
+            <div class="tod-info">
+              <strong>9mice, Kai Angel</strong>
+              <small>Homecoming</small>
+              <div class="tod-genres">Лиричный рэп</div>
+              <div class="tod-player">
+                <div class="tod-timeline"><div class="tod-progress"></div></div>
+                <div class="tod-time"><span class="tod-current">0:00</span> <span class="tod-duration">0:00</span></div>
+                <button class="tod-play">▶</button>
+              </div>
+            </div>
+            <div class="tod-wave">
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <div class="tod-card" id="tod-8">
+            <img class="tod-cover" src="/img/рикимару.webp" alt="рикимару - вайфу!" loading="lazy">
+            <div class="tod-info">
+              <strong>рикимару</strong>
+              <small>вайфу!</small>
+              <div class="tod-genres">Хип-хоп</div>
+              <div class="tod-player">
+                <div class="tod-timeline"><div class="tod-progress"></div></div>
+                <div class="tod-time"><span class="tod-current">0:00</span> <span class="tod-duration">0:00</span></div>
+                <button class="tod-play">▶</button>
+              </div>
+            </div>
+            <div class="tod-wave">
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <div class="tod-card" id="tod-9">
+            <img class="tod-cover" src="/img/naruto.webp" alt="MIKAYA - NARUTO" loading="lazy">
+            <div class="tod-info">
+              <strong>MIKAYA</strong>
+              <small>NARUTO</small>
+              <div class="tod-genres">Хип-хоп</div>
+              <div class="tod-player">
+                <div class="tod-timeline"><div class="tod-progress"></div></div>
+                <div class="tod-time"><span class="tod-current">0:00</span> <span class="tod-duration">0:00</span></div>
+                <button class="tod-play">▶</button>
+              </div>
+            </div>
+            <div class="tod-wave">
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <div class="tod-card" id="tod-10">
+            <img class="tod-cover" src="/img/face.webp" alt="FACE - Техно-шоу" loading="lazy">
+            <div class="tod-info">
+              <strong>FACE</strong>
+              <small>Техно-шоу</small>
+              <div class="tod-genres">Хип-хоп, трэп</div>
+              <div class="tod-player">
+                <div class="tod-timeline"><div class="tod-progress"></div></div>
+                <div class="tod-time"><span class="tod-current">0:00</span> <span class="tod-duration">0:00</span></div>
+                <button class="tod-play">▶</button>
+              </div>
+            </div>
+            <div class="tod-wave">
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="recommendations-top wrap">
+      <div class="container">
+        <div class="section-header">
+          <h2>Топ рекомендаций</h2>
+          <p>Самые популярные и персональные треки для тебя.</p>
+        </div>
+
+        <div class="top-categories">
+          <div class="top-category">
+            <h3>Топ 5 для тебя</h3>
+
+            <div class="top-list">
+
+              <div class="top-item" id="top-1">
+                <div class="top-track">
+                  <div class="top-wave">
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                  <div class="top-text">
+                    <strong>Yeat</strong>
+                    <span>Swërved It</span>
+                  </div>
+                </div>
+                <button class="top-play">▶</button>
+              </div>
+
+              <div class="top-item" id="top-2">
+                <div class="top-track">
+                  <div class="top-wave">
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                  <div class="top-text">
+                    <strong>Nyusha</strong>
+                    <span>Вою на Луну</span>
+                  </div>
+                </div>
+                <button class="top-play">▶</button>
+              </div>
+
+              <div class="top-item" id="top-3">
+                <div class="top-track">
+                  <div class="top-wave">
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                  <div class="top-text">
+                    <strong>Lx24</strong>
+                    <span>Танцы под Луной</span>
+                  </div>
+                </div>
+                <button class="top-play">▶</button>
+              </div>
+
+              <div class="top-item" id="top-4">
+                <div class="top-track">
+                  <div class="top-wave">
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                  <div class="top-text">
+                    <strong>Linkin Park</strong>
+                    <span>Numb</span>
+                  </div>
+                </div>
+                <button class="top-play">▶</button>
+              </div>
+
+              <div class="top-item" id="top-5">
+                <div class="top-track">
+                  <div class="top-wave">
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                  <div class="top-text">
+                    <strong>jnhygs, 9lives</strong>
+                    <span>XTAYALIVE</span>
+                  </div>
+                </div>
+                <button class="top-play">▶</button>
+              </div>
+
+            </div>
+          </div>
+          <div class="top-category">
+            <h3>Лучшее недели</h3>
+
+            <div class="top-list">
+
+              <div class="top-item" id="top-6">
+                <div class="top-track">
+                  <div class="top-wave">
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                  <div class="top-text">
+                    <strong>girl in red</strong>
+                    <span>We fall in love in october</span>
+                  </div>
+                </div>
+                <button class="top-play">▶</button>
+              </div>
+
+              <div class="top-item" id="top-7">
+                <div class="top-track">
+                  <div class="top-wave">
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                  <div class="top-text">
+                    <strong>fortuna812</strong>
+                    <span>не знакомы</span>
+                  </div>
+                </div>
+                <button class="top-play">▶</button>
+              </div>
+
+              <div class="top-item" id="top-8">
+                <div class="top-track">
+                  <div class="top-wave">
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                  <div class="top-text">
+                    <strong>Flo Rida</strong>
+                    <span>Right Round</span>
+                  </div>
+                </div>
+                <button class="top-play">▶</button>
+              </div>
+
+              <div class="top-item" id="top-9">
+                <div class="top-track">
+                  <div class="top-wave">
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                  <div class="top-text">
+                    <strong>Cigarettes After Sex</strong>
+                    <span>Sunsetz</span>
+                  </div>
+                </div>
+                <button class="top-play">▶</button>
+              </div>
+
+              <div class="top-item" id="top-10">
+                <div class="top-track">
+                  <div class="top-wave">
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                  <div class="top-text">
+                    <strong>Михаил Круг</strong>
+                    <span>Кольщик</span>
+                  </div>
+                </div>
+                <button class="top-play">▶</button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <address>
+      <a href="#" class="social__link" rel="nofollow" target="_blank"><img src="img/icon_tg.svg" alt="tg"></a>
+      <a href="#" class="social__link" rel="nofollow" target="_blank"><img src="img/icon_vk.svg" alt="vk"></a>
+      <a href="#" class="social__link" rel="nofollow" target="_blank"><img src="img/icon_discord.svg" alt="discord"></a>
+    </address>
+  </footer>
+  <div class="modal" id="artistModal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <h2 class="modal-title">Артист</h2>
+      <div class="audio-player">
+        <audio id="audioPlayer"></audio>
+        <button class="play-btn">▶</button>
+        <div class="timeline">
+          <div class="progress"></div>
+        </div>
+        <span class="time current">0:00</span>
+        <span class="time duration">0:00</span>
+      </div>
+      <ul class="modal-tracks"></ul>
+    </div>
+  </div>
+  <script src="js/menu.js"></script>
+  <script type="module" src="js/tod-player.js"></script>
+  <script type="module" src="js/music-modal.js"></script>
+</body>
+
+</html>

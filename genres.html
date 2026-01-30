@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Слушай и загружай музыку, находи новых артистов и создавай плейлисты">
+  <link rel="stylesheet" href="css/genres.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
+  <link type="image/x-icon" href="favicon/favicon.ico" rel="shortcut icon">
+  <link type="Image/x-icon" href="favicon/favicon.ico" rel="icon">
+  <title>Жанры</title>
+</head>
+
+<body>
+  <div class="menu-overlay"></div>
+  <header class="header">
+    <div class="container header__inner">
+      <div class="burger"><span></span><span></span><span></span></div>
+      <a href="index.html"><img src="/img/logo.svg" alt="logo"></a>
+      <nav class="menu">
+        <button class="menu-close">&times;</button>
+        <ul class="menu__list">
+          <li class="menu__item"><a class="menu__list-link" href="#">Новинки</a></li>
+          <li class="menu__item"><a class="menu__list-link" href="recommendations.html">Рекомендации</a></li>
+          <li class="menu__item"><a class="menu__list-link" href="genres.html">Жанры</a></li>
+          <li class="menu__item"><a class="menu__list-link" href="#">Плейлисты</a></li>
+          <li class="menu__item"><a class="menu__list-link" href="#">Исполнители</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="genres-hero wrap">
+      <img 
+        src="/img/genres-hero.webp" 
+        alt="bg_hero" 
+        aria-hidden="true"
+        class="genres-hero-bg"
+        fetchpriority="high"
+        decoding="async"
+      >
+
+      <div class="container genres-hero-content">
+        <h1>Музыкальные жанры</h1>
+        <p>От классики до андеграунда. Выбирай жанр под настроение — и слушай то, что резонирует с тобой.</p>
+      </div>
+    </section>
+    <section class="genres-section wrap">
+      <div class="container">
+        <h2>Популярные жанры</h2>
+        <div id="genresSplide" class="splide horizontal-scroll">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <div class="genre-card" data-genres="hiphop">
+                  <img src="/img/hiphop.webp" alt="Хип-хоп" data-tag="popular" title="Ритмичный и динамичный хип-хоп" loading="lazy" class="genre-card-img">
+                  <span class="genre-title">Хип-хоп</span>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="genre-card" data-genres="rock">
+                  <img src="/img/rock.webp" alt="Рок" data-tag="popular" title="Энергичные рок-треки" loading="lazy" class="genre-card-img">
+                  <span class="genre-title">Рок</span>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="genre-card" data-genres="pop">
+                  <img src="/img/pop.webp" alt="Поп" data-tag="popular" title="Запоминающиеся мелодии и лёгкие тексты" loading="lazy" class="genre-card-img">
+                  <span class="genre-title">Поп</span>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="genre-card" data-genres="chanson">
+                  <img src="/img/chanson.webp" alt="Шансон" data-tag="popular" title="Эмоциональные истории о жизни" loading="lazy" class="genre-card-img">
+                  <span class="genre-title">Шансон</span>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="genre-card" data-genres="electronica">
+                  <img src="/img/electronica.webp" alt="Электроника" data-tag="popular" title="Атмосферные звуки и танцевальные ритмы" loading="lazy" class="genre-card-img">
+                  <span class="genre-title">Электроника</span>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="genre-card" data-genres="hyperpop">
+                  <img src="/img/hyperpop.webp" alt="Хайперпоп" data-tag="popular" title="Яркая и экспериментальная поп-музыка" loading="lazy" class="genre-card-img">
+                  <span class="genre-title">Хайперпоп</span>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="genre-card" data-genres="phonk">
+                  <img src="/img/phonk.webp" alt="Phonk" data-tag="popular" title="Тёмный хип-хоп с олдскульным битом" loading="lazy" class="genre-card-img">
+                  <span class="genre-title">Phonk</span>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="genre-card" data-genres="lofi">
+                  <img src="/img/lo-fi.webp" alt="Lo-fi" data-tag="popular" title="Расслабляющий фон с мягкими битами" loading="lazy" class="genre-card-img">
+                  <span class="genre-title">Lo-fi</span>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="genre-card" data-genres="rap">
+                  <img src="/img/rap.webp" alt="Рэп" data-tag="popular" title="Современный рэп с выразительными текстами" loading="lazy" class="genre-card-img">
+                  <span class="genre-title">Рэп</span>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="genre-card" data-genres="jazz">
+                  <img src="/img/jazz.webp" alt="Джаз" data-tag="popular" title="Импровизации, саксофон и свободный ритм" loading="lazy" class="genre-card-img">
+                  <span class="genre-title">Джаз</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="vibe-section wrap">
+      <div class="container">
+        <h2>Какой сейчас твой вайб?</h2>
+        <p class="vibe-subtitle">Выбери настроение и мы подберём трек</p>
+        <div class="vibe-cards horizontal-scroll">
+          <div class="vibe-card" data-vibe="love" title="Романтические и чувственные треки">
+            <img src="/img/vibe-love.webp" alt="Любовь" loading="lazy" class="vibe-card-img">
+            <span class="vibe-title">Любовь</span>
+          </div>
+          <div class="vibe-card" data-vibe="happy" title="Веселые и радостные треки">
+            <img src="/img/vibe-happy.webp" alt="Радостно" loading="lazy" class="vibe-card-img">
+            <span class="vibe-title">Радостно</span>
+          </div>
+          <div class="vibe-card" data-vibe="sad" title="Меланхоличные и трогательные треки">
+            <img src="/img/vibe-sad.webp" alt="Грусть" loading="lazy" class="vibe-card-img">
+            <span class="vibe-title">Грусть</span>
+          </div>
+          <div class="vibe-card" data-vibe="active" title="Энергичные и драйвовые треки">
+            <img src="/img/vibe-active.webp" alt="Активно" loading="lazy" class="vibe-card-img">
+            <span class="vibe-title">Активно</span>
+          </div>
+          <div class="vibe-card" data-vibe="calm" title="Спокойные и расслабляющие треки">
+            <img src="/img/vibe-calm.webp" alt="Спокойно" loading="lazy" class="vibe-card-img">
+            <span class="vibe-title">Спокойно</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="purpose-section wrap">
+      <div class="container">
+        <h2>Музыка для...</h2>
+        <p class="purpose-subtitle">Подбери саундтрек под свой момент</p>
+
+        <div class="purpose-cards">
+          <div class="purpose-card" data-purpose="work">
+            <img src="/img/purpose-work.webp" alt="Работы и учёбы" loading="lazy" class="purpose-card-img">
+            <span>Работы и учёбы</span>
+          </div>
+
+          <div class="purpose-card" data-purpose="relax">
+            <img src="/img/purpose-relax.webp" alt="Отдыха" loading="lazy" class="purpose-card-img">
+            <span>Отдыха</span>
+          </div>
+
+          <div class="purpose-card" data-purpose="sport">
+            <img src="/img/purpose-sport.webp" alt="Тренировок" loading="lazy" class="purpose-card-img">
+            <span>Тренировок</span>
+          </div>
+
+          <div class="purpose-card" data-purpose="road">
+            <img src="/img/purpose-road.webp" alt="Дороги" loading="lazy" class="purpose-card-img">
+            <span>Дороги</span>
+          </div>
+
+          <div class="purpose-card" data-purpose="sleep">
+            <img src="/img/purpose-sleep.webp" alt="Сна" loading="lazy" class="purpose-card-img">
+            <span>Сна</span>
+          </div>
+
+          <div class="purpose-card" data-purpose="party">
+            <img src="/img/purpose-party.webp" alt="Вечеринки" loading="lazy" class="purpose-card-img">
+            <span>Вечеринки</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="random-section">
+      <div class="container random-container">
+        <h2>Не знаешь, что выбрать?</h2>
+        <p class="random-text">
+          Мы подберём музыку за тебя — просто нажми кнопку
+        </p>
+
+        <button class="random-btn" id="randomMusicBtn">
+          <span class="dice">🎲</span> Удиви меня
+        </button>
+
+      </div>
+    </section>
+  </main>
+  <footer>
+    <address>
+      <a href="#" class="social__link" rel="nofollow" target="_blank"><img src="img/icon_tg.svg" alt="tg"></a>
+      <a href="#" class="social__link" rel="nofollow" target="_blank"><img src="img/icon_vk.svg" alt="vk"></a>
+      <a href="#" class="social__link" rel="nofollow" target="_blank"><img src="img/icon_discord.svg" alt="discord"></a>
+    </address>
+  </footer>
+  <div class="modal" id="artistModal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <h2 class="modal-title">Артист</h2>
+      <div class="audio-player">
+        <audio id="audioPlayer"></audio>
+        <button class="play-btn">▶</button>
+        <div class="timeline">
+          <div class="progress"></div>
+        </div>
+        <span class="time current">0:00</span>
+        <span class="time duration">0:00</span>
+      </div>
+      <ul class="modal-tracks"></ul>
+    </div>
+  </div>
+  <div id="starPreloader" class="star-preloader">
+    <div class="stars">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <p>Подбираем музыку для тебя…</p>
+  </div>
+  <script src="js/menu.js"></script>
+  <script type="module" src="js/music-modal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script src="js/genres-slider.js"></script>
+</body>
+
+</html>

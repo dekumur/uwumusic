@@ -1,0 +1,622 @@
+.section-header h2 {
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+.section-header p {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.recommendations-hero {
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.recommendations-hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 70%;
+    filter: brightness(0.4);
+    z-index: 1;
+}
+
+.recommendations-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.recommendations-hero h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.recommendations-hero p {
+    font-size: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.recommendations-tod {
+    padding: 60px 0;
+    color: #fff;
+}
+
+.tod-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 22px;
+}
+
+.tod-card {
+    background: linear-gradient(145deg, #1c1c1c, #141414);
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: 0.25s;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.tod-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.recommendations-surprise {
+    margin-top: 65px;
+}
+
+.tod-cover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.7));
+}
+
+.tod-info {
+    padding: 14px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.tod-info strong {
+    font-size: 15px;
+    color: #00AACC;
+}
+
+.tod-info small {
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.tod-genres {
+    font-size: 11px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.tod-player {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tod-play {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    background: #fff;
+    color: #111;
+    font-size: 16px;
+    align-self: center;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.tod-play:hover {
+    transform: scale(1.08);
+}
+
+.tod-timeline {
+    height: 4px;
+    background: #333;
+    border-radius: 3px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.tod-progress {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #00AACC, #00e0ff);
+}
+
+.tod-time {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #aaa;
+}
+
+.tod-wave {
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    display: flex;
+    gap: 3px;
+}
+
+.tod-wave span,
+.top-wave span {
+    width: 3px;
+    height: 6px;
+    background: #00AACC;
+    border-radius: 2px;
+    animation: wave 1s infinite ease-in-out;
+    animation-play-state: paused;
+}
+
+.tod-card.playing .tod-wave span,
+.top-item.playing .top-wave span {
+    animation-play-state: running;
+}
+
+@keyframes wave {
+
+    0%,
+    100% {
+        height: 5px;
+        opacity: 0.6;
+    }
+
+    50% {
+        height: 16px;
+        opacity: 1;
+    }
+}
+
+.editor-cards {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+.editor-card {
+    flex: 0 0 auto;
+    width: 200px;
+    border-radius: 14px;
+    background: #1f1f1f;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: .2s;
+    cursor: pointer;
+}
+
+.editor-card:hover {
+    transform: translateY(-5px);
+}
+
+.editor-cover {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.editor-info {
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+.recommendations-top {
+    padding: 20px 0;
+}
+
+.top-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.top-category {
+    background: #181818;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.top-category h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #00e0ff;
+}
+
+.top-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.top-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 14px;
+    border-radius: 12px;
+    background: #1f1f1f;
+    transition: 0.2s;
+}
+
+.top-item:hover {
+    background: #262626;
+}
+
+.top-track {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+}
+
+.top-text {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.top-text strong {
+    color: #fff;
+    font-size: 14px;
+}
+
+.top-text span {
+    font-size: 13px;
+    color: #aaa;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.top-play {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: #fff;
+    cursor: pointer;
+}
+
+.top-wave {
+    display: flex;
+    align-items: flex-end;
+    gap: 2px;
+    height: 16px;
+    width: 26px;
+}
+
+.tod-wave span,
+.top-wave span {
+  width: 3px;
+  height: 6px;
+  background: #00AACC;
+  border-radius: 2px;
+  animation: wave 1s infinite ease-in-out;
+  animation-play-state: paused;
+}
+
+.tod-card.playing .tod-wave span,
+.top-item.playing .top-wave span {
+  animation-play-state: running;
+}
+
+.tod-wave span:nth-child(1),
+.top-wave span:nth-child(1) { animation-delay: 0s; }
+.tod-wave span:nth-child(2),
+.top-wave span:nth-child(2) { animation-delay: 0.1s; }
+.tod-wave span:nth-child(3),
+.top-wave span:nth-child(3) { animation-delay: 0.2s; }
+.tod-wave span:nth-child(4),
+.top-wave span:nth-child(4) { animation-delay: 0.3s; }
+.tod-wave span:nth-child(5),
+.top-wave span:nth-child(5) { animation-delay: 0.4s; }
+.tod-wave span:nth-child(6),
+.top-wave span:nth-child(6) { animation-delay: 0.5s; }
+.tod-wave span:nth-child(7),
+.top-wave span:nth-child(7) { animation-delay: 0.6s; }
+.tod-wave span:nth-child(8),
+.top-wave span:nth-child(8) { animation-delay: 0.7s; }
+.tod-wave span:nth-child(9),
+.top-wave span:nth-child(9) { animation-delay: 0.8s; }
+.tod-wave span:nth-child(10),
+.top-wave span:nth-child(10) { animation-delay: 0.9s; }
+
+.tod-card,
+.editor-card {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(145deg, #1c1c1c, #141414);
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.25s;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.tod-cover,
+.editor-cover {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+.tod-cover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.7));
+  pointer-events: none;
+}
+
+@keyframes wave {
+  0%, 100% { height: 5px; opacity: 0.6; }
+  50% { height: 16px; opacity: 1; }
+}
+
+
+@media (max-width: 768px) {
+    .recommendations-hero {
+        height: 320px;
+    }
+
+    .recommendations-hero h1 {
+        font-size: 28px;
+    }
+
+    .recommendations-hero p {
+        font-size: 16px;
+    }
+
+    .tod-cards {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 16px;
+    }
+
+    .editor-cards {
+        gap: 16px;
+    }
+
+    .editor-card {
+        width: 180px;
+    }
+
+    .editor-cover {
+        height: 180px;
+    }
+
+    .section-header h2 {
+        font-size: 24px;
+    }
+
+    .section-header p {
+        font-size: 15px;
+    }
+
+    .top-categories {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .top-category h3 {
+        font-size: 17px;
+    }
+
+    .top-text strong {
+        font-size: 15px;
+    }
+
+    .top-text span {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 420px) {
+    .recommendations-hero {
+        height: 260px;
+    }
+
+    .recommendations-hero h1 {
+        font-size: 24px;
+    }
+
+    .recommendations-hero p {
+        font-size: 14px;
+    }
+
+    .tod-cards {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .tod-info strong {
+        font-size: 15px;
+    }
+
+    .tod-info small {
+        font-size: 13px;
+    }
+
+    .tod-genres {
+        font-size: 12px;
+    }
+
+    .editor-card {
+        width: 160px;
+    }
+
+    .editor-cover {
+        height: 160px;
+    }
+
+    .section-header h2 {
+        font-size: 22px;
+    }
+
+    .section-header p {
+        font-size: 14px;
+    }
+
+    .top-category h3 {
+        font-size: 16px;
+    }
+
+    .top-text strong {
+        font-size: 14px;
+    }
+
+    .top-text span {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 375px) {
+    .recommendations-hero {
+        height: 240px;
+    }
+
+    .recommendations-hero h1 {
+        font-size: 22px;
+    }
+
+    .recommendations-hero p {
+        font-size: 13px;
+    }
+
+    .tod-cards {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .tod-info strong {
+        font-size: 14px;
+    }
+
+    .tod-info small {
+        font-size: 12px;
+    }
+
+    .tod-genres {
+        font-size: 11px;
+    }
+
+    .editor-card {
+        width: 140px;
+    }
+
+    .editor-cover {
+        height: 140px;
+    }
+
+    .section-header h2 {
+        font-size: 20px;
+    }
+
+    .section-header p {
+        font-size: 13px;
+    }
+
+    .top-category h3 {
+        font-size: 15px;
+    }
+
+    .top-text strong {
+        font-size: 13px;
+    }
+
+    .top-text span {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 320px) {
+    .recommendations-hero {
+        height: 220px;
+        padding: 0 10px;
+    }
+
+    .recommendations-hero h1 {
+        font-size: 20px;
+    }
+
+    .recommendations-hero p {
+        font-size: 12px;
+        max-width: 90%;
+    }
+
+    .tod-cards {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .tod-info strong {
+        font-size: 13px;
+    }
+
+    .tod-info small {
+        font-size: 11px;
+    }
+
+    .tod-genres {
+        font-size: 10px;
+    }
+
+    .editor-card {
+        width: 120px;
+    }
+
+    .editor-cover {
+        height: 120px;
+    }
+
+    .section-header h2 {
+        font-size: 18px;
+    }
+
+    .section-header p {
+        font-size: 12px;
+    }
+
+    .top-category h3 {
+        font-size: 14px;
+    }
+
+    .top-text strong {
+        font-size: 12px;
+    }
+
+    .top-text span {
+        font-size: 11px;
+    }
+}
