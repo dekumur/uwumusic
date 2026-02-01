@@ -620,3 +620,18 @@
         font-size: 11px;
     }
 }
+
+@media (hover: none) and (pointer: coarse) {
+  .tod-play:hover {
+    transform: none;
+  }
+
+  .tod-card:hover {
+    transform: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .editor-card:hover {
+    transform: none;
+  }
+}
